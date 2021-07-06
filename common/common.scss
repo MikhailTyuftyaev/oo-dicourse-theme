@@ -241,7 +241,7 @@ body{
     display: none;
 }
 .custom-search-banner{
-    background-color: red;
+    background-color: #F5F5F5;
     
     .wrap.custom-search-banner-wrap{
         margin: 0 auto;
@@ -678,6 +678,7 @@ body.search-page{
 .main-search{
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 body.search-page label.control-label{
@@ -714,7 +715,29 @@ body.search-page label.control-label{
         }
     }
     
-    
+     .search-results{
+            .discourse-tag{
+                .box{
+                    background-color:none;
+                }
+            }
+            .topic-title{
+                    font-size: 18px;
+                    color: #333333;
+                    font-weight: bold;
+                    font-size: 18px;
+                    --primary-medium: #333;
+                }
+            .category-name{
+                color: #AAAAAA;
+            }
+            font-size: 14px;
+            color: #333333;
+        }
+        .blurb{
+             font-size: 14px;
+            color: #333333;
+        }
     
     .search-bar .search-cta,
     .btn-primary{
@@ -879,21 +902,22 @@ body.search-page label.control-label{
                 display: inline-flex;
             }
             
-            
             .control-group{
-                .count {
-                    width: 46.5%;
-                }
+                 .count {
+                    width: 45%;
+                    } 
                 .count-dash{
                     margin-top: 10px;
                     display: inline-block;
-                    padding:0 6px;
+                    padding:0 5px;
                 }
             }
             
             .advanced-search-topics-posts-group{
                 display: flex;
-                
+                align-content: flex-end;
+                justify-content: space-evenly;
+                align-items: flex-end;
                 legend{
                     font-style: normal;
                     font-weight: normal;
@@ -905,7 +929,7 @@ body.search-page label.control-label{
                 }
                 
                 .control-group{
-                    width: 50%;
+                  //  width: 50%;
                     min-width: auto;
                 }
                 
@@ -934,7 +958,7 @@ body.search-page label.control-label{
                     background-position: 0 0;
                     background-repeat: no-repeat;
                     position: absolute;
-                    right: 15px;
+                    right: 5px;
                     top: 15px;
                     color: inherit;
                     height: 19px;
@@ -1028,6 +1052,24 @@ body.search-page label.control-label{
         
         .search-info{
             border-bottom: none;
+            display: flex;
+            //flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            .sort-by{
+                width: 150px;
+                .combo-box-header{
+                    background: #F9F9F9;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    padding: 11px 3px 13px 7px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
         }
     }
 }
@@ -1074,6 +1116,10 @@ body.search-page label.control-label{
 .fps-result .search-category{
     align-items: center;
 }
+
+.advanced-search-topics-posts-group{
+        flex-direction: row;
+    }
 
 #reply-control{
     #reply-title {
@@ -2438,7 +2484,6 @@ a[data-user-card="system"] img{
 }
 
 
-
 @media screen and (max-width: 1120px) {
     .wrap{
         padding: 0 40px;
@@ -2499,6 +2544,39 @@ a[data-user-card="system"] img{
             }
         }
     }
+    
+    .control-group{
+                .count {
+                    width: 44%;
+                }
+               
+            }
+    
+    .advanced-search-topics-posts-group{
+        flex-direction: column;
+    }
+    
+            .search-info{
+            border-bottom: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: baseline;
+            .sort-by{
+                width:auto;
+                .combo-box-header{
+                    background: #F9F9F9;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    padding: 11px 0 13px 7px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
 }
 @media screen and (max-width: 592px) {
   .category-breadcrumb{
@@ -2544,6 +2622,62 @@ a[data-user-card="system"] img{
             }
         } 
     } 
+    
+    
+     .main-search{
+    flex-direction: column;
+     .search-advanced-sidebar{
+         width:100%;
+     }
+     .search-advanced{
+         width:100%;
+     }
+     
+     .advanced-search-topics-posts-group{
+         width:100%;
+     }
+     
+     .grouped-control{
+         flex-direction: row;
+     }
+     .control-group{
+             width:100%;
+     }
+     .search-advanced-filters{
+            .control-group{
+                 width:100%;
+                 color:#333;
+                 .pull-left{
+                     width:100%;
+                 }
+            }
+         
+     }
+            
+        .search-results{
+            .discourse-tag{
+                .box{
+                    background-color:none;
+                }
+            }
+            .topic-title{
+                    font-size: 18px;
+                    color: #333333;
+                    font-weight: bold;
+                    font-size: 18px;
+                    --primary-medium: #333;
+                }
+            .category-name{
+                color: #AAAAAA;
+            }
+            font-size: 14px;
+            color: #333333;
+        }
+        .blurb{
+             font-size: 14px;
+            color: #333333;
+        }
+}
     
     .do-categories{
         h3 {
@@ -2604,6 +2738,7 @@ a[data-user-card="system"] img{
             }
         }
     }
+    
 }
 .about .details .primary{
         padding: 56px 0;
