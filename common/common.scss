@@ -1056,6 +1056,7 @@ body.search-page label.control-label{
             //flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-around;
+            align-items: baseline;
            // align-items: flex-start;
             .sort-by{
               //  width: 150px;
@@ -2560,11 +2561,12 @@ a[data-user-card="system"] img{
                     background: #F9F9F9;
                     box-sizing: border-box;
                     border-radius: 3px;
-                    padding: 11px 0 13px 7px;
+                    padding: 11px 3px 13px 7px;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 14px;
                     line-height: 22px;
+                    max-width: 150px;
                 }
             }
         }
