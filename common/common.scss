@@ -2222,7 +2222,7 @@ html:not(.mobile-view) .fixed-modal .discourse-local-dates-create-modal.modal-bo
         padding: 12px 11px 12px 11px;
     }
     .cooked{
-        padding: 0 11px 0.25em 11px;
+        padding: 20px 11px 0.25em 11px;
     }
 } 
 
@@ -2236,12 +2236,12 @@ nav.post-controls{
             box-sizing: border-box;
             text-transform: uppercase;
             background-color: #FFFFFF;
-            border: 1px solid #CCCCCC;
+            border: 1px solid #AAAAAA;
             border-radius: 3px;
             font-size: 13px;
             line-height: 133%;
             font-weight: 600;
-            color: #808080;
+            color: #444444;
             height: 48px;
 
             &:hover{
@@ -2311,13 +2311,13 @@ nav.post-controls{
         padding: 12px 36px 12px 20px;
         text-transform: uppercase;
         background-color: #FFFFFF;
-        border: 1px solid #CCCCCC;
+        border: 1px solid #AAAAAA;
         box-sizing: border-box;
         border-radius: 3px;
         font-size: 13px;
         line-height: 133%;
         font-weight: 600;
-        color: #808080;
+        color: #444444;
         height: 48px;
         
         &.create .d-icon{
@@ -2388,13 +2388,13 @@ nav.post-controls{
         padding: 12px 30px 12px 20px;
         text-transform: uppercase;
         background-color: #FFFFFF;
-        border: 1px solid #CCCCCC;
+        border: 1px solid #AAAAAA;
         box-sizing: border-box;
         border-radius: 3px;
         font-size: 13px;
         line-height: 133%;
         font-weight: 600;
-        color: #808080;
+        color: #444444;
         height: 48px;
         
         .d-icon{
@@ -2437,6 +2437,9 @@ a[data-user-card="system"] img{
     border-radius: 0;
 }
 
+    .names span a {
+        color: #333;
+    }
 
 
 @media screen and (max-width: 1120px) {
@@ -2451,6 +2454,10 @@ a[data-user-card="system"] img{
     .custom-search-banner .wrap.custom-search-banner-wrap h1{
         font-size: 30px;
     }
+}
+    
+@media (max-width: 838px){
+
     table.topic-list{
         th{
             font-size: 14px;
@@ -2499,7 +2506,59 @@ a[data-user-card="system"] img{
             }
         }
     }
+    
+    .topic-body {
+        box-sizing: border-box;
+        width: calc(100% - 0px);
+        border-top: none;
+        border-bottom: 1px solid var(--primary-low);
+    }
+    
+    .container.posts {
+        display: block;
+        padding: 0;
+    }
+    
+    .topic-status-info, .topic-timer-info {
+        border-top: none;
+    }
+    
+    .topic-body .cooked {
+        padding: 20px 0px 0.25em 0px;
+        line-height: 26px;
+    }
+    
+    .cooked h3 {
+        margin: 10px 0 10px;
+    }
+    
+    .topic-avatar {
+        border-top: none;
+        padding-top: 16px;
+        float: left;
+    }
+    
+    .main-avatar img {
+    border-radius: 50% !important;
+    }
+    
+    .names .svg-icon-title {
+        margin-left: 8px;
+        margin-right: 0px;
+    }
+    
+    .posts-wrapper {
+    border-top: 1px solid var(--primary-low);
+    }
+    
+    .topic-body .topic-meta-data {
+        padding: 11px 11px 12px 11px;
+        position: absolute;
+        top: -45px;
+        left: 48px;
+    }
 }
+
 @media screen and (max-width: 592px) {
   .category-breadcrumb{
         >li{
