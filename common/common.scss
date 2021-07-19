@@ -675,10 +675,16 @@ body.search-page{
 .discourse-no-touch .btn-primary.btn-hover{
         background-color:#FF865C;
 }
+.searchHeading{
+    text-align: center;
+    font-size: 24px;
+    line-height: 133%;
+    margin: 33px auto 32px;
+}
+
 .main-search{
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
 }
 
 body.search-page label.control-label{
@@ -1217,26 +1223,17 @@ body.search-page label.control-label{
         ul li .svg-icon{
             height: 24px;
             width: 24px;
-            fill: none;
-            
-            &:hover{
-               fill: none;
-            }
+            color: var(--primary-high);
         }
         
         .svg-icon{
-            height: 20px;
-            width: 20px;
-            fill: none;
-            
-            &:hover{
-               fill: none;  
-            }
-      
+            height: 24px;
+            width: 24px;
+            color: var(--primary-high);
         }
         
         button:hover >.svg-icon{
-           fill: none; 
+           color: var(--primary-high);
         }
         
         ul li:nth-child(2) .svg-icon-title{
@@ -2209,10 +2206,21 @@ html:not(.mobile-view) .fixed-modal .discourse-local-dates-create-modal.modal-bo
     .d-icon{
         height: 24px;
         width: 24px;
-        color: white;
+        color: var(--primary-high);
     }
     .btn{
-        padding: 4px;
+        padding: 8px;
+        background: transparent;
+        border-radius: 3px;
+        
+        &:hover{
+            background: #EDEDED;
+            
+            
+            .d-icon{
+                color: var(--primary-high);
+            }
+        }
     }
     
     .timeline-container .topic-timeline{
@@ -2268,6 +2276,8 @@ nav.post-controls{
     .actions button,
     .double-button{
         vertical-align: middle;
+        border-radius: 3px;
+        padding: 8px;
         
         &.create{
             padding: 15px 36px 15px 22px;
@@ -2291,7 +2301,6 @@ nav.post-controls{
             }
             
             .d-icon{
-                color: transparent;
                 margin-right: 12px;
                 height: 12px;
                 width: 12px;
@@ -2303,9 +2312,13 @@ nav.post-controls{
         }
         
         .d-icon{
-            color: transparent;
+            color: var(--primary-high);
             height: 24px;
             width: 24px;
+            
+            &.d-icon-pencil-alt{
+                color: transparent;
+            }
         }
     }
 }
@@ -2365,7 +2378,7 @@ nav.post-controls{
         }
             
         .d-icon{
-            color: transparent;
+            color: var(--primary-high);
             height: 24px;
             width: 24px;
             margin-right: 8px;
@@ -2832,14 +2845,19 @@ a[data-user-card="system"] img{
     .quick-access-panel{
         border-top: none;
     }
-    div.menu-links-header .menu-links-row button.active{
-        border: none;
+    div.menu-links-header .menu-links-row button.active,
+    div.menu-links-header .menu-links-row button:hover{
+        border: 1px solid #fff;
         border-bottom: 1px solid #FF6F3D;
+        background-color: transparent;
         
         .d-icon{
             color: #FF6F3D;
         }
     }
+}
+.alert.alert-info{
+    background-color: #EEEEEE;
 }
 
  
